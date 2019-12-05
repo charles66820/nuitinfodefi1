@@ -1,9 +1,6 @@
 
 const express = require("express");
 const fs = require("fs");
-const bodyParser = require("body-parser");
-
-require("dotenv").config(); // load .env file
 
 if (process.env.ENV == "dev") {
 
@@ -11,12 +8,8 @@ if (process.env.ENV == "dev") {
 
 // app settings
 const app = express();
-global.port = process.env.PORT || 80;
+global.port = process.env.PORT || 8080;
 global.hostname = process.env.HOSTNAME || "localhost";
-
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 app.use(express.static(__dirname + "/public"));
 

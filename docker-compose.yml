@@ -5,9 +5,11 @@ services:
     image: 'node:8'
     user: "node"
     working_dir: /home/node/app
-    command: "npm start"
-    #environment:
-    #  - NODE_ENV=production
+    command: "bash -c \"npm install && npm start\""
+    environment:
+     - ENV=dev
+     - PORT=8080
+     - HOSTNAME=localhost
     volumes:
       - '.:/home/node/app'
     ports:
