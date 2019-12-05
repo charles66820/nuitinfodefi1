@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- TODO: replace by prod version -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <link rel="stylesheet" href="/OT/css/style.css">
+    <script src="/OT/js/main.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="app">
+      {{ message }}
+    </div>
+    <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!'
+      }
+    })
+    </script>
+  </body>
+</html>
