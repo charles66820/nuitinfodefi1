@@ -1,3 +1,43 @@
 html {
-  background-color: blue;
+  background-color: rgb(255, 217, 195);
+}
+
+div.polaroid {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;   
+}
+
+h1 {
+  text-align: center;
+  background-color: rgb(255, 217, 195);
+  margin-bot: 10px;
+}
+
+.card{
+  width: 18rem;
+  width: 18rem;
+  margin: 10px;
+  background-color : rgb(255, 217, 195);
+}
+.card-img-top{
+  margin: 25% 0 0 0;
+  background-color : rgb(255, 217, 195);
+}
+
+
+h2 {
+  background-color: rgb(255, 217, 195);
+  font-size:20px;
+  
+}
+
+body {
+  background-color : rgb(255, 217, 195);
 }
