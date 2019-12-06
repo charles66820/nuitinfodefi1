@@ -30,6 +30,19 @@
       }
     })
     </script>
+    <script>
+      function masquer_div(id){
+        if (document.getElementById(id).style.display == 'none')
+        {
+             document.getElementById(id).style.display = 'block';
+        }
+        else 
+        {
+             document.getElementById(id).style.display = 'none';
+        }
+      }
+    </script>
+    <input type="button" value="Suite" onclick="afficher_div('salon');" />
     <DIV id="salon">
         <center>
           <img scr="image_salon.jpg" width="900" height="1000"/>
@@ -42,7 +55,8 @@
           ceux qui y travaillent.
         </p>
       </DIV>
-      <DIV id="Terrasse">
+      <input type="button" value="Suite" onclick="afficher_div('terrasse');" />
+      <DIV id="terrasse">
           <center>
             <img scr="image_terrasse.jpg" width="1000" height="750"/>
           </center>
@@ -51,6 +65,7 @@
             bon endroit. En effet, ce n'est pas chez Leroy Merlin que vous serrez
           </p>
         </DIV>
+        <input type="button" value="Suite" onclick="afficher_div('cuisine');" />
         <DIV id="cuisine">
             <center>
               <img scr="image_cuisine.jpg" width="1070" height="800"/>
