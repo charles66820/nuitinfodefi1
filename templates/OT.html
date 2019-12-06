@@ -2,23 +2,42 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>{{ title }}</title>
+    <title>Description de l'équipe</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- TODO: replace by prod version -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     <link rel="stylesheet" href="/OT/css/style.css">
-    <script src="/OT/js/main.js" charset="utf-8"></script>
   </head>
   <body>
     <div id="app">
-      {{ message }}
+        <img src="/OT/img/logo.png">
+        <div class="tilte">
+        <h1>{{ message }}</h1>
+      </div>
+
+      <div class="container">
+          
+          <br/>
+          <br/>
+          <p>{{ messagebis }}
+    
+          <br/>
+          <br/>
+          {{messagebisbis}}
+          </p> 
+      </div>
+      <footer>{{noms}}</footer>
     </div>
-    <script type="text/javascript">
-    var app = new Vue({
-      el: '#app',
-      data: {
-        message: 'Hello Vue!'
-      }
-    })
-    </script>
-  </body>
+    <div id="ap2">
+      <div class="title"> 
+            <h1>{{ desc2 }}</h1>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <p>{{ projet }}
+            </p> 
+      </div>
+    <script src="/OT/js/main.js" charset="utf-8"></script>
+</body>
+
 </html>
