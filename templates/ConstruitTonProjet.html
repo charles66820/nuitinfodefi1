@@ -2,79 +2,179 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Construit ton projet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- TODO: replace by prod version -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     <link rel="stylesheet" href="/ConstruitTonProjet/css/style.css">
-    <script src="/ConstruitTonProjet/js/main.js" charset="utf-8"></script>
   </head>
   <body>
-      
-    <center>
+    <div class="container">
+      <div class="row justify-content-center">
           <img src="/ConstruitTonProjet/img/logo_Leroy_Merlin.png" width="300" height="200" />
-    </center>
-          <h1 class ="text"> LeRoy Merlin</h1>
-      
-    <center>    
+      </div>
+      <div class="row justify-content-center">
+          <h1> LeRoy Merlin</h1>
+      </div>
+      <div class="row justify-content-center">
           <img src="/ConstruitTonProjet/img/plan maison.jpg" width="900" height="1000" />
-    </center>
-
-    <div id="app">
-      {{ message }}
+      </div>
     </div>
-    <script type="text/javascript">
-    var app = new Vue({
-      el: '#app',
-      data: {
-        message: 'Hello Vue!'
-      }
-    })
-    </script>
-    <script>
-      function masquer_div(id){
-        if (document.getElementById(id).style.display == 'none')
-        {
-             document.getElementById(id).style.display = 'block';
-        }
-        else 
-        {
-             document.getElementById(id).style.display = 'none';
-        }
-      }
-    </script>
-    <input type="button" value="Suite" onclick="afficher_div('salon');" />
-    <DIV id="salon">
-        <center>
-          <img scr="image_salon.jpg" width="900" height="1000"/>
-        </center>
-        <p>
-          Leroy Merlin est une entreprise chaleureuse et conviviale. Ce n'est pas pour rien qu'elle à
-          été 3ème au classement des "Great Place To Work" en 2018. Le travail d'équipe et l'entraide 
-          fait partie de l'ADN de Leroy Merlin. La cohesion d'équipe mais aussi l'autonomie et la 
-          prise d'initiative et de responsabilité sont aussi des aspects importants du quotidien de 
-          ceux qui y travaillent.
-        </p>
-      </DIV>
-      <input type="button" value="Suite" onclick="afficher_div('terrasse');" />
-      <DIV id="terrasse">
-          <center>
-            <img scr="image_terrasse.jpg" width="1000" height="750"/>
-          </center>
-          <p>
-            Si les perspectives d'avenir et d'évolution sont fondamentales pour vous, alors vous êtes au
-            bon endroit. En effet, ce n'est pas chez Leroy Merlin que vous serrez
-          </p>
-        </DIV>
-        <input type="button" value="Suite" onclick="afficher_div('cuisine');" />
-        <DIV id="cuisine">
-            <center>
-              <img scr="image_cuisine.jpg" width="1070" height="800"/>
-            </center>
-            <p>
-              Leroy Merlin est une des plus grosses entreprises françaises, et est même leader dans son
-              domaine.
-              
-            </p>
-          </DIV>
+  
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#salonModal">
+      salon
+    </button>
+    <div class="modal" id="salonModal">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Le salon</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row justify-content-center">
+              <img class="img-fluid" src="/ConstruitTonProjet/img/image_salon.jpg" />
+              <p>
+                Leroy Merlin est une entreprise chaleureuse et conviviale. Ce n'est pas pour rien qu'elle à
+                été 3ème au classement des "Great Place To Work" en 2018. Le travail d'équipe et l'entraide 
+                fait partie de l'ADN de Leroy Merlin. La cohesion d'équipe mais aussi l'autonomie et la 
+                prise d'initiative et de responsabilité sont aussi des aspects importants du quotidien de 
+                ceux qui y travaillent.
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#terrasseModal">
+      terrasse/jardin
+    </button>
+    <div class="modal" id="terrasseModal">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">La terrasse</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row justify-content-center">
+              <img class="img-fluid" src="/ConstruitTonProjet/img/image_terrasse.jpg" />
+              <p>
+                  Si les perspectives d'avenir et d'évolution sont fondamentales pour vous, alors vous êtes au
+                  bon endroit. En effet, ce n'est pas chez Leroy Merlin que vous serrez.
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cuisineModal">
+      cuisine
+    </button>
+    <div class="modal" id="cuisineModal">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">La cuisine</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row justify-content-center">
+              <img class="img-fluid" src="/ConstruitTonProjet/img/image_cuisine.jpg" />
+              <p>
+                  Leroy Merlin est une des plus grosses entreprises françaises, et est même leader dans son
+                  domaine.
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#salle_de_bainModal">
+        salle de bain
+      </button>
+      <div class="modal" id="salle_de_bainModal">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">la salle de bain</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row justify-content-center">
+                <img class="img-fluid" src="/ConstruitTonProjet/img/image_salle_de_bain.jpg" />
+                <p>
+                  #propreté</br>
+                  #environementDeTravailSain</br>
+                  #santé
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chambreModal">
+          chambre
+        </button>
+        <div class="modal" id="chambreModal">
+          <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">La chambre</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row justify-content-center">
+                  <img class="img-fluid" src="/ConstruitTonProjet/img/image_chambre.jpg" />
+                  <p>
+                    L'environement agréable de travail de Leroy Merlin vous ferra sentir comme chez vous et en
+                    sécurité.</br>
+                    #passion</br>
+                    #confort
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#garageModal">
+            garage
+          </button>
+          <div class="modal" id="garageModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Le garage</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row justify-content-center">
+                    <img class="img-fluid" src="/ConstruitTonProjet/img/image_garage.jpg" />
+                    <p>
+                      Leroy Merlin vous fournira de quoi réaliser vos projets professionnels ainsi que ceux des clients.
+                    Aussi, cette entreprise réalise des milliers nombreux projets simultanément #çaBouge</br>
+                      #développement</br>
+                      #avenir
+                    </p>
+                  </div>
+                </div>
+              </div>
+          </div>
+            
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/ConstruitTonProjet/js/main.js" charset="utf-8"></script>
   </body>
 </html>

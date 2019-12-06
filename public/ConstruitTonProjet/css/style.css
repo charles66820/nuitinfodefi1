@@ -2,12 +2,6 @@ html {
   background-color: green;
 }
 
-.green {
+body {
   background-color: rgb(69, 228, 77);
-}
-
-.text {
-    font-family:verdana;
-    margin: 20px auto;
-    width: max-content;
 }
