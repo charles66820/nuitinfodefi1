@@ -51,9 +51,7 @@ app.get("/api/*", function (req, res) {
 });
 
 app.all('*', (req, res) => {
-  res.status(400).json({
-    msg: "404"
-  });
+  res.redirect("/404/");
 });
 
 app.listen(port, () => {
