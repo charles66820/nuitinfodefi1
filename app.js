@@ -51,7 +51,10 @@ app.get("/api/*", function (req, res) {
 });
 
 app.all('*', (req, res) => {
-  res.redirect("/404/");
+  //res.redirect("/404/");
+  fs.readFile('public/404/index.html', (err, data) => {
+    res.end(data);
+  });
 });
 
 app.listen(port, () => {
