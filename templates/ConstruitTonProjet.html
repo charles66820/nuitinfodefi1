@@ -21,7 +21,7 @@
           <img src="/ConstruitTonProjet/img/plan maison.jpg" width="900" height="1000" />
       </div>
     </div>
-  
+
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#salonModal">
       salon
     </button>
@@ -38,9 +38,9 @@
               <img class="img-fluid" src="/ConstruitTonProjet/img/image_salon.jpg" />
               <p>
                 Leroy Merlin est une entreprise chaleureuse et conviviale. Ce n'est pas pour rien qu'elle à
-                été 3ème au classement des "Great Place To Work" en 2018. Le travail d'équipe et l'entraide 
-                fait partie de l'ADN de Leroy Merlin. La cohesion d'équipe mais aussi l'autonomie et la 
-                prise d'initiative et de responsabilité sont aussi des aspects importants du quotidien de 
+                été 3ème au classement des "Great Place To Work" en 2018. Le travail d'équipe et l'entraide
+                fait partie de l'ADN de Leroy Merlin. La cohesion d'équipe mais aussi l'autonomie et la
+                prise d'initiative et de responsabilité sont aussi des aspects importants du quotidien de
                 ceux qui y travaillent.
               </p>
             </div>
@@ -185,35 +185,36 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <div class="row justify-content-end">                          
-                          <table class="table" id="app">
-                            <thead class="thead-light">
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Code postal</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Ville</th>
-                                <th scope="col">Adresse</th>
-                                <th scope="col">Numero de telephone</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr v-for="magasin in magasins">
-                                <th scope="row">{{ magasin.id }}</th>
-                                <td>{{ magasin.city_code }}</td>
-                                <td>{{ magasin.title }}</td>
-                                <td>{{ magasin.city }}</td>
-                                <td>{{ magasin.adress }}</td>
-                                <td>{{ magasin.phone_number }}</td>
-                              </tr>
-                            </tbody>
-                          </table>
+                    <input type="text" placeholder="filtrer" id="filter">
+                    <div class="row justify-content-end">
+                      <table class="table" id="app">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Code postal</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Ville</th>
+                            <th scope="col">Adresse</th>
+                            <th scope="col">Numero de telephone</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr v-for="magasin in magasins">
+                            <th scope="row">{{ magasin.id }}</th>
+                            <td>{{ magasin.city_code }}</td>
+                            <td>{{ magasin.title }}</td>
+                            <td>{{ magasin.city }}</td>
+                            <td>{{ magasin.adress }}</td>
+                            <td>{{ magasin.phone_number }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
             </div>
-            
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/ConstruitTonProjet/js/main.js" charset="utf-8" ></script>
