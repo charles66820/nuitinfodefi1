@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+canvas {
+    width: 10%;
+    height: 10%;
+    background: url(/3D/img/macron.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+a:hover{
+    color: purple;
+}

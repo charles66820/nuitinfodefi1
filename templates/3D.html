@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>{{ title }}</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- TODO: replace by prod version -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
-    <link rel="stylesheet" href="/3D/css/style.css">
-    <script src="/3D/js/main.js" charset="utf-8"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graph 3D</title>
+    <script src="https://threejs.org/build/three.js"></script>
+    <link href="/3D/css/main.css" rel="stylesheet" type="text/css">
   </head>
+
   <body>
-    <div id="app">
-      {{ message }}
-    </div>
-    <script type="text/javascript">
-    var app = new Vue({
-      el: '#app',
-      data: {
-        message: 'Hello Vue!'
-      }
-    })
-    </script>
+    <h2><a href="https://discoverthreejs.com/">Discoverthreejs.com</a></h2>
+    <canvas class="bg-c" id="c"> </canvas>
+    <script src="/3D/js/app.js"></script>
+    <!--<script src="js/three/three.js-master/build/three.js"></script>-->
   </body>
 </html>
