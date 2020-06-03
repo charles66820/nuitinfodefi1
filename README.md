@@ -1,4 +1,6 @@
-# nuitinfodefi1
+# nuitinfodefi
+
+Site web créer lore de la nuit de l'informatique 2019
 
 ## Install and run
 
