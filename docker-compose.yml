@@ -1,7 +1,8 @@
 version: '2'
 
 services:
-  node:
+  nuit-info-2019:
+    container_name: nuit-info-2019
     image: 'node:8'
     user: "node"
     working_dir: /home/node/app
@@ -12,5 +13,17 @@ services:
      - HOSTNAME=localhost
     volumes:
       - '.:/home/node/app'
-    ports:
-      - '8000:8080'
+    labels:
+      - "traefik.http.routers.nuit-info-2019.rule=Host(`nuitinfo.magicorp.fr`)"
+      - traefik.http.routers.nuit-info-2019.middlewares=https-redirectscheme
+      - traefik.http.services.nuit-info-2019.loadbalancer.server.port=8080
+      - "traefik.http.routers.nuit-info-2019-secure.rule=Host(`nuitinfo.magicorp.fr`)"
+      - traefik.http.routers.nuit-info-2019-secure.tls=true
+      - traefik.http.routers.nuit-info-2019-secure.tls.certresolver=sslresolver
+    networks:
+      - backend
+
+networks:
+  backend:
+    external:
+      name: backend
