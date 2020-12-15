@@ -3,6 +3,7 @@ version: '2'
 services:
   nuit-info-2019:
     container_name: nuit-info-2019
+    restart: always
     image: node:10-alpine
     user: "node"
     working_dir: /home/node/app
